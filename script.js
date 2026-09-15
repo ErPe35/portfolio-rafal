@@ -16,8 +16,9 @@ if (menuButton && nav) {
         });
 
     });
-
 }
+
+
 const backToTop = document.querySelector(".back-to-top");
 
 if (backToTop) {
@@ -43,10 +44,3 @@ if (backToTop) {
     });
 
 }
-<input type="text" name="name" id="name" placeholder="Twoje imię" required>
-
-<input type="email" name="email" id="email" placeholder="Twój e-mail" required>
-
-<textarea name="message" id="message" placeholder="Twoja wiadomość" required></textarea>
-
-<button type="submit">Wyślij wiadomość</button>
