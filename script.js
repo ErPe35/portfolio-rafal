@@ -1,30 +1,41 @@
-```javascript
-const menuButton = document.querySelector(".menu-button");
-const nav = document.querySelector(".nav");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (menuButton && nav) {
+    const menuButton = document.querySelector(".menu-button");
+    const nav = document.querySelector(".nav");
 
-    menuButton.addEventListener("click", () => {
+    if (!menuButton || !nav) {
+        console.log("Nie znaleziono menu");
+        return;
+    }
+
+    menuButton.addEventListener("click", function () {
         nav.classList.toggle("active");
     });
 
     const navLinks = document.querySelectorAll(".nav a");
 
-    navLinks.forEach((link) => {
-
-        link.addEventListener("click", () => {
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
             nav.classList.remove("active");
         });
-
     });
-}
+
+});
 
 
-const backToTop = document.querySelector(".back-to-top");
+/* =========================
+   BACK TO TOP
+========================= */
 
-if (backToTop) {
+document.addEventListener("DOMContentLoaded", function () {
 
-    window.addEventListener("scroll", () => {
+    const backToTop = document.querySelector(".back-to-top");
+
+    if (!backToTop) {
+        return;
+    }
+
+    window.addEventListener("scroll", function () {
 
         if (window.scrollY > 500) {
             backToTop.classList.add("visible");
@@ -34,7 +45,7 @@ if (backToTop) {
 
     });
 
-    backToTop.addEventListener("click", () => {
+    backToTop.addEventListener("click", function () {
 
         window.scrollTo({
             top: 0,
@@ -43,4 +54,4 @@ if (backToTop) {
 
     });
 
-}
+});
