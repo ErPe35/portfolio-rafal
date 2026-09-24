@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Architecture — projekt strony | Rafał Pałka</title>
+<meta name="description" content="Atelier Architecture — przykładowy projekt minimalistycznej strony internetowej dla pracowni architektonicznej.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rafalpalka.pl/atelier-architecture.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Atelier Architecture — projekt strony | Rafał Pałka">
+<meta property="og:description" content="Atelier Architecture — przykładowy projekt minimalistycznej strony internetowej dla pracowni architektonicznej.">
+<meta property="og:url" content="https://rafalpalka.pl/atelier-architecture.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atelier Architecture — projekt strony | Rafał Pałka">
+<meta name="twitter:description" content="Atelier Architecture — przykładowy projekt minimalistycznej strony internetowej dla pracowni architektonicznej.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">ATELIER<span>.</span></a>
+    <button class="menu-button" aria-label="Otwórz menu">☰</button>
+    <nav class="nav">
+        <a href="#studio">Studio</a>
+        <a href="#projects">Projekty</a>
+        <a href="#approach">Podejście</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<main>
+<section class="hero">
+    <div class="hero-image">
+        <div class="arch arch-one"></div>
+        <div class="arch arch-two"></div>
+        <div class="light"></div>
+    </div>
+    <div class="hero-content">
+        <p class="eyebrow">ARCHITEKTURA · WNĘTRZA · DESIGN</p>
+        <h1>Przestrzeń<br><i>ma znaczenie.</i></h1>
+        <p>Projektujemy miejsca, które są proste w formie, przemyślane w funkcji i ponadczasowe w charakterze.</p>
+        <a class="button" href="#projects">Zobacz projekty <span>↓</span></a>
+    </div>
+    <div class="hero-side">EST. 2018 / WARSAW</div>
+</section>
+
+<section id="studio" class="section studio">
+    <div class="label">01 — STUDIO</div>
+    <div class="grid">
+        <h2>Forma<br>spotyka <i>funkcję.</i></h2>
+        <div>
+            <p class="lead">Tworzymy architekturę, która nie potrzebuje nadmiaru, aby robić wrażenie.</p>
+            <p class="muted">Atelier Architecture to kameralna pracownia zajmująca się architekturą, wnętrzami i projektowaniem przestrzeni komercyjnych. Każdy projekt zaczynamy od miejsca, światła i potrzeb człowieka.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section projects">
+    <div class="label">02 — PROJEKTY</div>
+    <div class="project project-main">
+        <div class="project-photo photo-one"><span>01 / 06</span><b>HOUSE<br>01</b></div>
+        <div class="project-info"><div><h3>House 01</h3><p>ARCHITEKTURA · 2025</p></div><span>↗</span></div>
+    </div>
+    <div class="project-row">
+        <div class="project">
+            <div class="project-photo photo-two"><span>02 / 06</span><b>FORM<br>02</b></div>
+            <div class="project-info"><div><h3>Form 02</h3><p>WNĘTRZE · 2024</p></div><span>↗</span></div>
+        </div>
+        <div class="project">
+            <div class="project-photo photo-three"><span>03 / 06</span><b>LINE<br>03</b></div>
+            <div class="project-info"><div><h3>Line 03</h3><p>REZYDENCJA · 2024</p></div><span>↗</span></div>
+        </div>
+    </div>
+</section>
+
+<section id="approach" class="section approach">
+    <div class="label">03 — PODEJŚCIE</div>
+    <div class="grid">
+        <h2>Mniej,<br><i>ale lepiej.</i></h2>
+        <div class="principles">
+            <div><span>01</span><h3>Kontekst</h3><p>Każdy projekt wynika z miejsca, jego historii i otoczenia.</p></div>
+            <div><span>02</span><h3>Proporcja</h3><p>Forma, światło i materiał budują spójną całość.</p></div>
+            <div><span>03</span><h3>Trwałość</h3><p>Projektujemy z myślą o tym, jak przestrzeń będzie działać za lata.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="label">04 — KONTAKT</div>
+    <h2>Zaprojektujmy<br><i>coś dobrego.</i></h2>
+    <a href="mailto:hello@atelierarchitecture.pl" class="email">hello@atelierarchitecture.pl ↗</a>
+</section>
+</main>
+
+<footer>
+    <span>© 2026 ATELIER ARCHITECTURE</span>
+    <span>ARCHITECTURE / INTERIORS / DESIGN</span>
+</footer>
+
+<script>
+const button = document.querySelector(".menu-button");
+const nav = document.querySelector(".nav");
+button.addEventListener("click", () => nav.classList.toggle("active"));
+document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => nav.classList.remove("active"));
+});
+</script>
+</body>
+</html>
