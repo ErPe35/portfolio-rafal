@@ -41,7 +41,7 @@ a {
 
 
 .logo {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -1px;
 }
@@ -50,7 +50,7 @@ a {
 .logo span,
 h1 span,
 h2 span {
-    color: #a78bfa;
+    color: #60a5fa;
 }
 
 
@@ -167,7 +167,7 @@ h1 {
     position: absolute;
     width: 300px;
     height: 300px;
-    background: #7c3aed;
+    background: #2563eb;
     filter: blur(150px);
     opacity: 0.18;
     top: 100px;
@@ -284,21 +284,21 @@ h2 {
 
 .project-one {
     background:
-        radial-gradient(circle at 70% 30%, #6d28d9, transparent 30%),
+        radial-gradient(circle at 70% 30%, #1d4ed8, transparent 30%),
         linear-gradient(135deg, #161616, #050505);
 }
 
 
 .project-two {
     background:
-        radial-gradient(circle at 30% 50%, #9333ea, transparent 30%),
+        radial-gradient(circle at 30% 50%, #3b82f6, transparent 30%),
         linear-gradient(135deg, #151515, #050505);
 }
 
 
 .project-three {
     background:
-        radial-gradient(circle at 70% 70%, #4c1d95, transparent 35%),
+        radial-gradient(circle at 70% 70%, #1e3a8a, transparent 35%),
         linear-gradient(135deg, #191919, #050505);
 }
 
@@ -350,7 +350,7 @@ h2 {
 
 
 .service > span {
-    color: #a78bfa;
+    color: #60a5fa;
     font-size: 13px;
 }
 
@@ -839,7 +839,7 @@ footer {
 
 
 .creative-intro h1 span {
-    color: #a78bfa;
+    color: #60a5fa;
 }
 
 
@@ -1088,10 +1088,10 @@ footer {
 .thumb-auto-nav span { float:right; font-weight:400; color:#777; }
 .thumb-auto-hero { height:100%; padding:42px 22px; background:linear-gradient(135deg,#171717,#3c3c3c); color:#fff; }
 .thumb-auto-hero b { font-size:34px; line-height:.9; }
-.thumb-auto-hero em { color:#a78bfa; font-style:normal; }
+.thumb-auto-hero em { color:#60a5fa; font-style:normal; }
 .thumb-auto-hero small { display:block; margin-top:20px; color:#bbb; font-size:7px; letter-spacing:1px; }
 .mini-label { position:relative; z-index:2; font-size:48px; line-height:.8; font-weight:700; letter-spacing:-3px; text-align:center; }
-.project-one { background:radial-gradient(circle at 70% 30%,#6d28d9,transparent 30%),linear-gradient(135deg,#161616,#050505); color:#ddd; }
+.project-one { background:radial-gradient(circle at 70% 30%,#1d4ed8,transparent 30%),linear-gradient(135deg,#161616,#050505); color:#ddd; }
 .project-three { background:#eeeae1; color:#171717; }
 .project-three::before,.project-two::before { border-color:rgba(0,0,0,.12); }
 .project-three .mini-label em { color:#ff5b25; font-style:normal; }
@@ -1275,7 +1275,7 @@ footer {
 #about .about-stats strong {
     display: block;
     margin-bottom: 9px;
-    color: #a78bfa;
+    color: #60a5fa;
     font-size: 23px;
     line-height: 1;
 }
@@ -1389,7 +1389,7 @@ footer {
 }
 
 #services .service-number {
-    color: #a78bfa;
+    color: #60a5fa;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1466,7 +1466,7 @@ footer {
 
 #contact .form-group input:focus,
 #contact .form-group textarea:focus {
-    border-bottom-color: #a78bfa;
+    border-bottom-color: #60a5fa;
 }
 
 #contact .form-group input::placeholder,
@@ -1582,7 +1582,7 @@ footer {
 
 #services .services-heading h2 span,
 #contact .contact-heading h2 span {
-    color: #a78bfa;
+    color: #60a5fa;
 }
 
 #services .services-heading > p:last-child,
@@ -1618,7 +1618,7 @@ footer {
 }
 
 #services .service-number {
-    color: #a78bfa;
+    color: #60a5fa;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1689,7 +1689,7 @@ footer {
 
 #contact .form-group input:focus,
 #contact .form-group textarea:focus {
-    border-bottom-color: #a78bfa;
+    border-bottom-color: #60a5fa;
 }
 
 #contact .form-group input::placeholder,
@@ -1748,5 +1748,168 @@ footer {
 
     #services .service-card h3 {
         font-size: 18px;
+    }
+}
+
+/* AUTO POMOC — HERO THUMBNAIL */
+#projects .project-auto {
+    padding: 0;
+    background: #101010;
+    overflow: hidden;
+}
+
+#projects .auto-hero-thumb {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 34px;
+    background:
+        radial-gradient(circle at 88% 78%, rgba(255, 145, 0, .24), transparent 30%),
+        linear-gradient(135deg, #101010 0%, #171717 58%, #262016 100%);
+    color: #fff;
+    overflow: hidden;
+}
+
+#projects .auto-hero-thumb::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: -90px;
+    bottom: -120px;
+    border: 34px solid rgba(255, 149, 0, .16);
+    border-radius: 50%;
+}
+
+#projects .auto-hero-top {
+    position: relative;
+    z-index: 2;
+    color: #a9a9a9;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+#projects .auto-hero-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #ff9a00;
+}
+
+#projects .auto-hero-hours {
+    float: right;
+    color: #ff9a00;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#projects .auto-hero-title {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    line-height: .88;
+    letter-spacing: -3px;
+}
+
+#projects .auto-hero-title span,
+#projects .auto-hero-title strong {
+    display: block;
+}
+
+#projects .auto-hero-title span {
+    font-size: clamp(30px, 3.8vw, 52px);
+    font-weight: 800;
+}
+
+#projects .auto-hero-title strong {
+    color: #ff9a00;
+    font-size: clamp(36px, 4.7vw, 66px);
+    font-weight: 900;
+}
+
+#projects .auto-hero-tags {
+    position: relative;
+    z-index: 2;
+    margin-top: 16px;
+    color: #aaa;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#projects .auto-hero-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.14);
+}
+
+#projects .auto-hero-call {
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: #ff9a00;
+    color: #111;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#projects .auto-hero-phone {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+@media (max-width: 800px) {
+    #projects .auto-hero-thumb {
+        padding: 26px 28px;
+    }
+}
+
+/* FINAL FIX — KONTAKT: zapobieganie nachodzeniu nagłówka na formularz */
+#contact.contact-section {
+    width: min(1100px, 86%);
+    grid-template-columns: 400px minmax(0, 1fr);
+    column-gap: 70px;
+}
+
+#contact .contact-heading h2 {
+    max-width: 400px;
+    font-size: 56px;
+    line-height: .96;
+    letter-spacing: -3.2px;
+}
+
+#contact .contact-form {
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    #contact.contact-section {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    #contact .contact-heading h2 {
+        max-width: none;
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 520px) {
+    #contact .contact-heading h2 {
+        font-size: 50px;
+        letter-spacing: -3px;
     }
 }
