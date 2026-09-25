@@ -47,6 +47,13 @@ a {
 }
 
 
+.logo img {
+    display: block;
+    width: 205px;
+    height: auto;
+    max-width: 42vw;
+}
+
 .logo span,
 h1 span,
 h2 span {
@@ -395,7 +402,11 @@ footer {
 
     .header {
         padding: 25px 6%;
-   
+    }
+
+    .logo img {
+        width: 165px;
+        max-width: 52vw;
     }
 
     .hero {
