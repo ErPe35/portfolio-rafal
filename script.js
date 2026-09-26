@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ===== MENU MOBILNE =====
     const menuButton = document.querySelector(".menu-button");
     const nav = document.querySelector(".nav");
 
@@ -14,63 +15,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ===== POWRÓT NA GÓRĘ =====
     const backToTop = document.querySelector(".back-to-top");
-    if (!backToTop) return;
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 500) backToTop.classList.add("visible");
-        else backToTop.classList.remove("visible");
-    });
+    if (backToTop) {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 500) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
+            }
+        });
 
-    backToTop.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-});
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 
-
-// LICZNIK ODWIEDZIN — CounterAPI V2
-document.addEventListener("DOMContentLoaded", function () {
+    // ===== COUNTERAPI — ODWIEDZINY =====
     const visitCount = document.getElementById("visit-count");
 
-    if (!visitCount || typeof Counter === "undefined") {
+    if (!visitCount) {
+        return;
+    }
+
+    if (typeof Counter === "undefined") {
+        console.error("CounterAPI: biblioteka Counter nie została załadowana.");
+        visitCount.textContent = "błąd";
         return;
     }
 
     const counter = new Counter({
         workspace: "erpe35s-team-5693",
+        debug: true,
         timeout: 8000
     });
 
     counter.up("first-counter-5693")
         .then(function (result) {
-            visitCount.textContent = result.value;
+            console.log("CounterAPI OK:", result);
+
+            if (result && result.value !== undefined) {
+                visitCount.textContent = Number(result.value).toLocaleString("pl-PL");
+            } else {
+                console.error("CounterAPI: brak wartości w odpowiedzi.", result);
+                visitCount.textContent = "błąd";
+            }
         })
         .catch(function (error) {
-            console.error("Błąd licznika odwiedzin:", error);
-            visitCount.textContent = "—";
-        });
-});
-
-/* =========================
-   COUNTERAPI — ODWIEDZINY
-========================= */
-document.addEventListener("DOMContentLoaded", function () {
-    const visitCount = document.getElementById("visit-count");
-
-    if (!visitCount || typeof Counter === "undefined") {
-        return;
-    }
-
-    const counter = new Counter({
-        workspace: "erpe35s-team-5693"
-    });
-
-    counter.up("first-counter-5693")
-        .then(function (result) {
-            visitCount.textContent = result.value;
-        })
-        .catch(function (error) {
-            console.error("CounterAPI error:", error);
-            visitCount.textContent = "—";
+            console.error("CounterAPI ERROR:", error);
+            visitCount.textContent = "błąd";
         });
 });
