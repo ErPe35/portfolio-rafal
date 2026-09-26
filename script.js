@@ -50,3 +50,27 @@ document.addEventListener("DOMContentLoaded", function () {
             visitCount.textContent = "—";
         });
 });
+
+/* =========================
+   COUNTERAPI — ODWIEDZINY
+========================= */
+document.addEventListener("DOMContentLoaded", function () {
+    const visitCount = document.getElementById("visit-count");
+
+    if (!visitCount || typeof Counter === "undefined") {
+        return;
+    }
+
+    const counter = new Counter({
+        workspace: "erpe35s-team-5693"
+    });
+
+    counter.up("first-counter-5693")
+        .then(function (result) {
+            visitCount.textContent = result.value;
+        })
+        .catch(function (error) {
+            console.error("CounterAPI error:", error);
+            visitCount.textContent = "—";
+        });
+});
