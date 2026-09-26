@@ -1924,3 +1924,28 @@ footer {
         letter-spacing: -3px;
     }
 }
+
+
+/* LICZNIK ODWIEDZIN */
+.visit-counter {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#visit-count {
+    color: #4d9dff;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    footer {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .visit-counter {
+        order: 3;
+        width: 100%;
+        text-align: left;
+    }
+}
