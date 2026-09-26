@@ -26,3 +26,45 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+
+
+/* LICZNIK ODWIEDZIN */
+document.addEventListener("DOMContentLoaded", function () {
+    const counterElement = document.querySelector("#visit-count");
+
+    if (!counterElement) {
+        return;
+    }
+
+    // Jedno naliczenie na sesję przeglądarki, żeby zwykłe odświeżanie
+    // strony nie zawyżało wyniku.
+    const sessionKey = "rafalpalka-visit-counted";
+
+    if (sessionStorage.getItem(sessionKey)) {
+        return;
+    }
+
+    function updateVisitCount() {
+        if (typeof Counter === "undefined") {
+            return;
+        }
+
+        const counter = new Counter({
+            workspace: "rafalpalka-pl"
+        });
+
+        counter.up("visits")
+            .then(function (result) {
+                const value = result.value ?? result.data;
+                if (value !== undefined && value !== null) {
+                    counterElement.textContent = Number(value).toLocaleString("pl-PL");
+                    sessionStorage.setItem(sessionKey, "1");
+                }
+            })
+            .catch(function () {
+                // Licznik nie może blokować działania strony.
+            });
+    }
+
+    updateVisitCount();
+});
