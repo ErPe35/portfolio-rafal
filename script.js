@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const counter = new Counter({
-        workspace: "erpe35s-workspace",
+        workspace: "erpe35s-team-5693",
         timeout: 8000
     });
 
-    counter.up("first-counter")
+    counter.up("first-counter-5693")
         .then(function (result) {
             visitCount.textContent = result.value;
         })
