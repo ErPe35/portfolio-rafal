@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         counter.up("visits")
             .then(function (result) {
-                const value = result.value ?? result.data;
+                const value = result.data ?? result.value;
                 if (value !== undefined && value !== null) {
                     counterElement.textContent = Number(value).toLocaleString("pl-PL");
                     sessionStorage.setItem(sessionKey, "1");
