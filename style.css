@@ -57,7 +57,7 @@ a {
 .logo span,
 h1 span,
 h2 span {
-    color: #60a5fa;
+    color: #0084fd;
 }
 
 
@@ -291,21 +291,21 @@ h2 {
 
 .project-one {
     background:
-        radial-gradient(circle at 70% 30%, #1d4ed8, transparent 30%),
+        radial-gradient(circle at 70% 30%, #006cf5, transparent 30%),
         linear-gradient(135deg, #161616, #050505);
 }
 
 
 .project-two {
     background:
-        radial-gradient(circle at 30% 50%, #3b82f6, transparent 30%),
+        radial-gradient(circle at 30% 50%, #0084fd, transparent 30%),
         linear-gradient(135deg, #151515, #050505);
 }
 
 
 .project-three {
     background:
-        radial-gradient(circle at 70% 70%, #1e3a8a, transparent 35%),
+        radial-gradient(circle at 70% 70%, #005dcc, transparent 35%),
         linear-gradient(135deg, #191919, #050505);
 }
 
@@ -357,7 +357,7 @@ h2 {
 
 
 .service > span {
-    color: #60a5fa;
+    color: #0084fd;
     font-size: 13px;
 }
 
@@ -850,7 +850,7 @@ footer {
 
 
 .creative-intro h1 span {
-    color: #60a5fa;
+    color: #0084fd;
 }
 
 
@@ -1099,10 +1099,10 @@ footer {
 .thumb-auto-nav span { float:right; font-weight:400; color:#777; }
 .thumb-auto-hero { height:100%; padding:42px 22px; background:linear-gradient(135deg,#171717,#3c3c3c); color:#fff; }
 .thumb-auto-hero b { font-size:34px; line-height:.9; }
-.thumb-auto-hero em { color:#60a5fa; font-style:normal; }
+.thumb-auto-hero em { color:#0084fd; font-style:normal; }
 .thumb-auto-hero small { display:block; margin-top:20px; color:#bbb; font-size:7px; letter-spacing:1px; }
 .mini-label { position:relative; z-index:2; font-size:48px; line-height:.8; font-weight:700; letter-spacing:-3px; text-align:center; }
-.project-one { background:radial-gradient(circle at 70% 30%,#1d4ed8,transparent 30%),linear-gradient(135deg,#161616,#050505); color:#ddd; }
+.project-one { background:radial-gradient(circle at 70% 30%,#006cf5,transparent 30%),linear-gradient(135deg,#161616,#050505); color:#ddd; }
 .project-three { background:#eeeae1; color:#171717; }
 .project-three::before,.project-two::before { border-color:rgba(0,0,0,.12); }
 .project-three .mini-label em { color:#ff5b25; font-style:normal; }
@@ -1286,7 +1286,7 @@ footer {
 #about .about-stats strong {
     display: block;
     margin-bottom: 9px;
-    color: #60a5fa;
+    color: #0084fd;
     font-size: 23px;
     line-height: 1;
 }
@@ -1400,7 +1400,7 @@ footer {
 }
 
 #services .service-number {
-    color: #60a5fa;
+    color: #0084fd;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1477,7 +1477,7 @@ footer {
 
 #contact .form-group input:focus,
 #contact .form-group textarea:focus {
-    border-bottom-color: #60a5fa;
+    border-bottom-color: #0084fd;
 }
 
 #contact .form-group input::placeholder,
@@ -1593,7 +1593,7 @@ footer {
 
 #services .services-heading h2 span,
 #contact .contact-heading h2 span {
-    color: #60a5fa;
+    color: #0084fd;
 }
 
 #services .services-heading > p:last-child,
@@ -1629,7 +1629,7 @@ footer {
 }
 
 #services .service-number {
-    color: #60a5fa;
+    color: #0084fd;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1700,7 +1700,7 @@ footer {
 
 #contact .form-group input:focus,
 #contact .form-group textarea:focus {
-    border-bottom-color: #60a5fa;
+    border-bottom-color: #0084fd;
 }
 
 #contact .form-group input::placeholder,
@@ -1925,7 +1925,7 @@ footer {
     }
 }
 
-/* LIBRECOUNTER */
+/* MINIMALISTYCZNY LICZNIK ODWIEDZIN */
 .visit-counter {
     text-align: center;
     white-space: nowrap;
@@ -1934,26 +1934,22 @@ footer {
 .visit-counter a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: inherit;
+    gap: 9px;
+    color: #0084FD;
     text-decoration: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.visit-counter img {
-    width: 22px;
-    height: 22px;
-    display: block;
+.visit-counter a:hover {
+    opacity: 0.82;
+    transform: translateY(-1px);
 }
 
-@media (max-width: 800px) {
-    footer {
-        flex-wrap: wrap;
-        gap: 10px 20px;
-    }
-
-    .visit-counter {
-        order: 3;
-        width: 100%;
-        text-align: left;
-    }
+.visit-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #0084FD;
+    box-shadow: 0 0 0 4px rgba(0, 132, 253, 0.12);
+    display: inline-block;
 }
