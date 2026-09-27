@@ -35,34 +35,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ===== COUNTERAPI — ODWIEDZINY =====
+    // ===== LICZNIK ODWIEDZIN — BEZPIECZNY PROXY PHP =====
     const visitCount = document.getElementById("visit-count");
 
     if (!visitCount) {
         return;
     }
 
-    if (typeof Counter === "undefined") {
-        console.error("CounterAPI: biblioteka Counter nie została załadowana.");
-        visitCount.textContent = "błąd";
-        return;
-    }
-
-    const counter = new Counter({
-        workspace: "erpe35s-team-5693",
-        debug: true,
-        timeout: 8000
-    });
-
-    counter.up("first-counter-5693")
+    fetch("counter.php", {
+        method: "GET",
+        cache: "no-store",
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("HTTP " + response.status);
+            }
+            return response.json();
+        })
         .then(function (result) {
             console.log("CounterAPI OK:", result);
 
             if (result && result.value !== undefined) {
                 visitCount.textContent = Number(result.value).toLocaleString("pl-PL");
             } else {
-                console.error("CounterAPI: brak wartości w odpowiedzi.", result);
-                visitCount.textContent = "błąd";
+                throw new Error("Brak wartości licznika w odpowiedzi API");
             }
         })
         .catch(function (error) {
