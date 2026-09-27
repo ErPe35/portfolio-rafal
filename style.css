@@ -1953,3 +1953,17 @@ footer {
     box-shadow: 0 0 0 4px rgba(0, 132, 253, 0.12);
     display: inline-block;
 }
+
+
+/* Licznik odwiedzin LibreCounter */
+.visit-counter a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+.visit-counter img {
+    width: auto;
+    height: 22px;
+    display: block;
+    filter: hue-rotate(170deg) saturate(1.4);
+}
