@@ -1925,45 +1925,16 @@ footer {
     }
 }
 
-/* MINIMALISTYCZNY LICZNIK ODWIEDZIN */
+/* LICZNIK ODWIEDZIN */
 .visit-counter {
     text-align: center;
     white-space: nowrap;
+    margin: 0;
 }
 
-.visit-counter a {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: #0084FD;
-    text-decoration: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.visit-counter a:hover {
-    opacity: 0.82;
-    transform: translateY(-1px);
-}
-
-.visit-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #0084FD;
-    box-shadow: 0 0 0 4px rgba(0, 132, 253, 0.12);
-    display: inline-block;
-}
-
-
-/* Licznik odwiedzin LibreCounter */
-.visit-counter a {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-}
 .visit-counter img {
+    display: inline-block;
     width: auto;
-    height: 22px;
-    display: block;
-    filter: hue-rotate(170deg) saturate(1.4);
+    height: 20px;
+    vertical-align: middle;
 }
