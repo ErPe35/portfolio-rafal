@@ -163,45 +163,34 @@ h1 {
 
 .hero-decoration {
     position: absolute;
-    right: 5%;
-    top: 25%;
-    width: 500px;
-    height: 500px;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(520px, 45vw);
+    height: min(520px, 45vw);
+    z-index: 1;
+    pointer-events: auto;
 }
 
-
-.glow {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: #2563eb;
-    filter: blur(150px);
-    opacity: 0.18;
-    top: 100px;
-    left: 100px;
+.particle-orb {
+    display: block;
+    cursor: crosshair;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-
-.circle {
+.particle-glow {
+    pointer-events: none;
     position: absolute;
-    border: 1px solid #292929;
+    width: 58%;
+    height: 58%;
+    left: 21%;
+    top: 21%;
     border-radius: 50%;
-}
-
-
-.circle-1 {
-    width: 400px;
-    height: 400px;
-    top: 50px;
-    left: 50px;
-}
-
-
-.circle-2 {
-    width: 250px;
-    height: 250px;
-    top: 125px;
-    left: 125px;
+    background: #0084fd;
+    filter: blur(90px);
+    opacity: 0.16;
 }
 
 
@@ -411,6 +400,8 @@ footer {
 
     .hero {
         padding: 150px 6% 80px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     h1 {
@@ -423,8 +414,14 @@ footer {
     }
 
     .hero-decoration {
-        right: -180px;
-        opacity: 0.5;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: min(430px, 92vw);
+        height: min(430px, 92vw);
+        margin: 20px auto 0;
+        opacity: 1;
     }
 
     .section {
