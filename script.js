@@ -150,6 +150,27 @@ document.addEventListener("DOMContentLoaded", function () {
         targetY = 0;
     });
 
+    // Reveal sections as they enter the viewport.
+    const revealSections = document.querySelectorAll(".reveal-section");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealSections.forEach(function (section) {
+            observer.observe(section);
+        });
+    } else {
+        revealSections.forEach(function (section) {
+            section.classList.add("is-visible");
+        });
+    }
+
     window.addEventListener("resize", resize);
     resize();
     createParticles();
